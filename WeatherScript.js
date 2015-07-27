@@ -3,9 +3,11 @@ var pathToIcon, weatherUnit;
 onload = init;
 
 function init() {
+	//draw initial outside look for the map
 	DrawMap(44.5403,-78.5463,1);
 }
 
+//draw the map using the specified location's longitude, latitude, and a chosen zoom amount
 function DrawMap(lat,lng, myZoom){
 	var mapCanvas = document.getElementById('map-canvas');
     var mapOptions = {
@@ -16,7 +18,9 @@ function DrawMap(lat,lng, myZoom){
     var map = new google.maps.Map(mapCanvas, mapOptions);		
 }
 
+//decide if we will search by zip or city
 function FindWeather(input,unit){
+	//if all the characters are numbers. it must be a zip
 	if (isNaN(input) == false){
 		WeatherByZip(input,unit);
 	}else{
@@ -24,6 +28,7 @@ function FindWeather(input,unit){
 	}	
 }
 
+//query by city
 function WeatherByCity(city,unit){
 	
 	var myPath = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=" + unit ;
@@ -37,6 +42,8 @@ function WeatherByCity(city,unit){
 				var sameCity = r.name.toUpperCase() === city.toUpperCase()				
 				if (sameCity == false)
 					window.alert("There is no city with such name. We made the closest prediction.");
+				
+				//Create JSON object 
 				var formulated_JSON_object = { 
 				"coordinates":{"lon":r.coord.lon,"lat":r.coord.lat}, "currentConditions": r.weather[0]['description'],
 				"temperature" : {"current":r.main.temp,"high":r.main.temp_max,"low":r.main.temp_min}};
@@ -69,6 +76,8 @@ function WeatherByZip(zip,unit){
 				if ( r.cod == "404"){
 					window.alert("Zip Code Not Found");
 				}else{
+					
+					//Create JSON object
 					var formulated_JSON_object = { 
 						"coordinates":{"lon":r.coord.lon,"lat":r.coord.lat}, "currentConditions": r.weather[0]['description'],
 						"temperature" : {"current":r.main.temp,"high":r.main.temp_max,"low":r.main.temp_min}};
@@ -100,6 +109,7 @@ function FillWidget(myLocation, myCondition, myTemp, myHTemp, myLTemp,myUnit,myI
 	document.getElementById("icon").src = myIconPath;	
 }
 
+//Set the weather symbol in the widget to either K, C, or F
 function SetWeatherUnitSymbol(unitIdentifier){
 	if (unitIdentifier == "Default")
 		weatherUnit = "&#8490;";
@@ -109,6 +119,7 @@ function SetWeatherUnitSymbol(unitIdentifier){
 		weatherUnit = "&#8457;";	
 }
 
+//Find the right icon for the current weather
 function SetWeatherIconPath(weatherId){	
 	if (weatherId >= 200 && weatherId <= 232)
 		pathToIcon = "img/200-232.png";

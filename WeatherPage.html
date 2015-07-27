@@ -22,8 +22,10 @@
 
 		<div id = "wrapper">
 
-			<noscript> Please enable JavaScript </noscript>
-
+			<!-- Map -->
+			<div id="map-canvas"></div>
+			
+			<!-- Widget -->
 			<div id="page-wrap">      
 				<div id="background-wrap">             	
 					<div id="weather">
@@ -37,10 +39,9 @@
 						<div id="unit-small_2"></div>
 					</div> 		
 				</div>          
-			</div>
+			</div>	
 
-			<div id="map-canvas"></div>
-
+			<!-- Search Box -->
 			<form id = "input-form" class="form-wrapper cf" >
 				<input type="text" name="inputId" placeholder="Enter City or Zip" required/>
 				<input type="button" id="findButton" value="Find Weather" onclick="FindWeather(this.form.inputId.value,this.form.tempUnit.value)"/>				

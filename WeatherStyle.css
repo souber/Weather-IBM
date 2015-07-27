@@ -1,3 +1,15 @@
+/* Entire Body Style */
+body {
+    margin: 0;
+	padding: 0;
+	background: url(img/page-background.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+/* Sytle for the query form */
 .form-wrapper {
 	position: absolute;
 		top: 10px;
@@ -12,7 +24,7 @@
     box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
 }
 
-
+/* Style for the city or zip input text */
 .form-wrapper input[type="text"]{
     width: 210px;
     height: 20px;
@@ -47,6 +59,8 @@
     font-weight: normal;
     font-style: italic;
 }   
+
+/* Sytle for the Find Weather Button */
 
 input#findButton {
 	position: relative;
@@ -83,15 +97,7 @@ input#findButton:hover, input#findButton:focus {
 	box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
 }
 
-body {
-    margin: 0;
-	padding: 0;
-	background: url(img/page-background.jpg) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
+/* Style for the Temperature Unit List */
 
 select#tempUnit {
    -webkit-appearance: button;
@@ -116,6 +122,8 @@ select#tempUnit {
 }
 
 
+/* Sytle for the Map Canvas */
+
 #map-canvas {
 	margin: 20px auto;
     width: 400px;
@@ -126,6 +134,9 @@ select#tempUnit {
 		right: 15px;
 }
 
+
+/* Style for the Widget */
+
 #page-wrap{	
 	margin: 20px auto; 
 	width: 300px;
@@ -133,6 +144,8 @@ select#tempUnit {
 	top : 45px;
 	left: 15px;
 }
+
+/* Background Image to make the widget look transparent */
 
 #background-wrap{
 	background: url(img/widget-background.jpg) no-repeat; 
@@ -151,6 +164,8 @@ select#tempUnit {
 	color: #fff;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.75);
 }
+
+/* City or zip code, and the description of the weather */
 	
 #location-condition {
 	font-size: 16px;
@@ -167,6 +182,8 @@ select#tempUnit {
 		bottom: -20px;
 		left: -10px;
 }
+
+/* Current Temperature */
 	
 #temp {
 	font-size: 55px;
@@ -175,6 +192,8 @@ select#tempUnit {
 		Top: 55px;
 		right: 30px;
 }
+
+/* Current Temperature Unit */
 	
 #unit-big {
 	font-size: 22px;
@@ -184,11 +203,15 @@ select#tempUnit {
 		right: 10px;
 }
 
+/* High Temperature */
+
 #high-temp {
 	position: absolute;
 		bottom: 50px;
 		right:  20px;
 }
+
+/* High Temperature Unit */
 	
 #unit-small_1 {
 	font-size: 10px;
@@ -198,11 +221,15 @@ select#tempUnit {
 		right: 10px;
 }
 	
+/* Low Temperature */	
+	
 #low-temp {
 	position: absolute;
 		bottom: 30px;
 		right:  20px;
 }
+	
+/* Low Temperature Unit */
 	
 #unit-small_2 {
 	font-size: 10px;
