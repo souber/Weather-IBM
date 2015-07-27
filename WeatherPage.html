@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html lang = "en">
+
+	<head>
+		<meta charset = "UTF-8"/>
+		<meta name = "description" content = "Weather querying. Small project for IBM recruiting"/>
+		<meta name = "keywords" content="OpenWeatherMap, weather current conditions, javascript"/>
+		<meta name="robots" content="index,follow"/>
+
+		<script src = "WeatherScript.js"> </script>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		
+		<link rel = "stylesheet" href = "WeatherStyle.css">
+		<link rel = "icon" href = "img/weather-icon.ico"/>
+		
+		<title> Weather </title> 
+	</head>
+
+
+	<body>
+
+		<div id = "wrapper">
+
+			<noscript> Please enable JavaScript </noscript>
+
+			<div id="page-wrap">      
+				<div id="background-wrap">             	
+					<div id="weather">
+						<div id="location-condition"></div>
+						<img id="icon">
+						<div id="temp"></div>
+						<div id="unit-big"></div>
+						<div id="high-temp"></div>
+						<div id="unit-small_1"></div>
+						<div id="low-temp"></div>
+						<div id="unit-small_2"></div>
+					</div> 		
+				</div>          
+			</div>
+
+			<div id="map-canvas"></div>
+
+			<form id = "input-form" class="form-wrapper cf" >
+				<input type="text" name="inputId" placeholder="Enter City or Zip" required/>
+				<input type="button" id="findButton" value="Find Weather" onclick="FindWeather(this.form.inputId.value,this.form.tempUnit.value)"/>				
+				<select id="tempUnit">
+					<option disabled>Select Unit</option>
+					<option selected value="Default">Kelvin</option>
+					<option value="Metric">Celsius</option>
+					<option value="Imperial">Fahrenheit</option>
+				</select>
+			</form>
+
+		</div>
+
+	</body>
+
+</html>

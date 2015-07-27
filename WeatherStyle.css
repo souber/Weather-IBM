@@ -1,0 +1,215 @@
+.form-wrapper {
+	position: absolute;
+		top: 10px;
+		left: 30%;	
+    width: 380px;
+	height: 70px; 
+    padding: 15px;
+    margin: 50px auto 50px auto;
+    background: #444;
+    background: rgba(0,0,0,.9);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+
+
+.form-wrapper input[type="text"]{
+    width: 210px;
+    height: 20px;
+    padding: 10px 5px;
+    float: left;   
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;     
+}
+
+.form-wrapper input[type="text"]:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+
+.form-wrapper input[type="text"]::-webkit-input-placeholder {
+   color: #999;
+   font-weight: normal;
+   font-style: italic;
+}
+
+.form-wrapper input[type="text"]:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-wrapper input[type="text"]:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}   
+
+input#findButton {
+	position: relative;
+		right: 5px;
+	width: 150px;
+	height: 70px;
+	padding: 5px 5px;
+	float: right;
+	border:2px groove #7c93ba;
+	cursor:pointer;	
+	background-color:#6b6dbb;
+	background: -webkit-gradient(linear, left top, left bottom, from(#88add7), to(#6b6dbb));
+	background: -webkit-linear-gradient(top, #88add7, #6b6dbb);
+	background: -moz-linear-gradient(top, #88add7, #6b6dbb);
+	background: -o-linear-gradient(top, #88add7, #6b6dbb);
+	background: linear-gradient(top, #88add7, #6b6dbb);
+	font-family:Andika, Arial, sans-serif;
+	color:#fff;
+	font-size:1.1em;
+	letter-spacing:.1em;
+	font-variant:small-caps;
+	-webkit-border-radius: 0 15px 15px 0;
+	-moz-border-radius: 0 15px 15px 0;
+	border-radius: 0 15px 15px 0;
+	-webkit-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+	-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+	box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+input#findButton:hover, input#findButton:focus {
+	color:#edebda;
+	-webkit-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+	-moz-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+	box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+}
+
+body {
+    margin: 0;
+	padding: 0;
+	background: url(img/page-background.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+select#tempUnit {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: 5px 0px;
+   overflow: hidden;
+   padding: 5px 5px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 220px;
+   height: 30px;
+}
+
+
+#map-canvas {
+	margin: 20px auto;
+    width: 400px;
+    height: 350px;
+	background-color: #CCC;
+	position: absolute;
+		top: 45px;
+		right: 15px;
+}
+
+#page-wrap{	
+	margin: 20px auto; 
+	width: 300px;
+	position: absolute;
+	top : 45px;
+	left: 15px;
+}
+
+#background-wrap{
+	background: url(img/widget-background.jpg) no-repeat; 
+	padding: 0px 0;
+	position: left;
+}
+
+#weather { 
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 210px;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.75);
+}
+	
+#location-condition {
+	font-size: 16px;
+	line-height: 22px;
+	position: absolute;
+		Top: 15px;
+		left: 15px;
+}
+
+#icon {
+	height: 150px;
+	width: 150px;
+	position: absolute;
+		bottom: -20px;
+		left: -10px;
+}
+	
+#temp {
+	font-size: 55px;
+	font-weight: normal;
+	position: absolute;
+		Top: 55px;
+		right: 30px;
+}
+	
+#unit-big {
+	font-size: 22px;
+	float: right;
+	position: absolute;
+		Top: 50px;
+		right: 10px;
+}
+
+#high-temp {
+	position: absolute;
+		bottom: 50px;
+		right:  20px;
+}
+	
+#unit-small_1 {
+	font-size: 10px;
+    float: right;	
+	position: absolute;
+		bottom: 60px;
+		right: 10px;
+}
+	
+#low-temp {
+	position: absolute;
+		bottom: 30px;
+		right:  20px;
+}
+	
+#unit-small_2 {
+	font-size: 10px;
+	float: right;
+	position: absolute;
+		bottom: 40px;
+		right: 10px;
+}
+	
+	
